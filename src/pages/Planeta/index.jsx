@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import "./styles.css"
+import "./styles.css";
+import edicao from "../../Images/edicao.png";
 export default class Planets extends Component{
 
     constructor(props) {
@@ -54,26 +55,20 @@ export default class Planets extends Component{
             <div className = "planeta">
                 {planetas.map( item => (
                     <div className = "card">
-                        <div className = "card-image"> <img src = {item.planeta_img}/> </div>
-                        <div className = "card-text">
-                            <span className = "date">{item.id_planeta}</span>
-                            <h2>{item.nome_planeta}</h2>
-                            <p>{item.comp_planeta}</p>
-                        </div>
-                        <div className = 'card-stats'>
-                            <div className = 'stat'>
-                                <div className = "value"> Tamanho: </div>
-                                <div className = "type"> {item.tam_planeta} km</div>
-                            </div>
-                            <div className = 'stat border'>
-                                <div className = "value"> Massa: </div>
-                                <div className = "type"> {item.massa_planeta} </div>
-                            </div>
-                            <div className = 'stat'>
-                                <div className = "value"> Gravidade: </div>
-                                <div className = "type"> {item.gravidade_planeta} </div>
-                            </div>
-                        </div>
+                        <button> <div className = "image"></div> </button>
+                        <button> <div className = "delete">  X </div> </button>
+                        <div className = "card-text"> ID: </div> 
+                        <div className = "card-planet"> {item.id_planeta}</div> <br/>
+                        <div className = "card-text"> Nome: </div> 
+                        <div className = "card-planet"> {item.nome_planeta}</div> <br/>
+                        <div className = "card-text"> Tamanho: </div> 
+                        <div className = "card-planet"> {item.tam_planeta} Km </div> <br/>
+                        <div className = "card-text"> Massa: </div> 
+                        <div className = "card-planet"> {item.massa_planeta} </div> <br/>
+                        <div className = "card-text"> Gravidade: </div> 
+                        <div className = "card-planet"> {item.gravidade_planeta} </div> <br/>
+                        <div className = "card-text"> Descrição: </div> 
+                        <div className = "card-planet"> {item.comp_planeta} </div> <br/>
                     </div>
                 ))}
             </div>
