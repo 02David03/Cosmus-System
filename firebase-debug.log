@@ -1,0 +1,48 @@
+[debug] [2020-02-12T19:08:26.085Z] ----------------------------------------------------------------------
+[debug] [2020-02-12T19:08:26.088Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\david\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-02-12T19:08:26.088Z] CLI Version:   7.13.0
+[debug] [2020-02-12T19:08:26.088Z] Platform:      win32
+[debug] [2020-02-12T19:08:26.088Z] Node Version:  v10.16.2
+[debug] [2020-02-12T19:08:26.089Z] Time:          Wed Feb 12 2020 16:08:26 GMT-0300 (GMT-03:00)
+[debug] [2020-02-12T19:08:26.089Z] ----------------------------------------------------------------------
+[debug] [2020-02-12T19:08:26.089Z] 
+[debug] [2020-02-12T19:08:26.098Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-12T19:08:26.099Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\david\OneDrive\Documentos\ProjetosGerais\Banco de dados\planetsistem\Bd-Work
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using universe-discovery-c7151.
+[debug] [2020-02-12T19:08:35.341Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/universe-discovery-c7151  
+ 
+[debug] [2020-02-12T19:08:36.132Z] <<< HTTP RESPONSE 200
+[info] 
+=== Database Setup
+[info] 
+[info] Firebase Realtime Database Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2020-02-12T19:15:21.838Z] Error: kill ENOSYS
+    at process.kill (internal/process/per_thread.js:198:13)
+    at process.listener (C:\Users\david\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\index.js:95:15)
+    at process.emit (events.js:198:13)
+[error] 
+[error] Error: An unexpected error has occurred.
