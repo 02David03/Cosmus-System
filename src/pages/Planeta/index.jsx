@@ -53,24 +53,25 @@ export default class Planets extends Component{
 
         return(
             <div className = "planeta">
-                {planetas.map( item => (
-                    <div className = "card">
-                        <div className = "delete"> <button> X </button> </div> <br/>
-                        <div className = "card-text"> ID: </div> 
-                        <div className = "card-planet"> {item.id_planeta}</div> <br/>
-                        <div className = "card-text"> Nome: </div> 
-                        <div className = "card-planet"> {item.nome_planeta}</div> <br/>
-                        <div className = "card-text"> Tamanho: </div> 
-                        <div className = "card-planet"> {item.tam_planeta} Km </div> <br/>
-                        <div className = "card-text"> Massa: </div> 
-                        <div className = "card-planet"> {item.massa_planeta} </div> <br/>
-                        <div className = "card-text"> Gravidade: </div> 
-                        <div className = "card-planet"> {item.gravidade_planeta} </div> <br/>
-                        <div className = "card-text"> Descrição: </div> 
-                        <div className = "card-planet"> {item.comp_planeta} </div> <br/>
-                        <div className = "edit"> <button> editar </button> </div>
-                    </div>
-                ))}
+                <ul>
+                    {planetas.map( item => (
+                        <li>
+                            <div className = "planet-name"> {item.nome_planeta}</div> <br/>
+                            <div className = "card-text"> ID: </div> 
+                            <div className = "card-planet"> {item.id_planeta}</div> <br/> 
+                            <div className = "card-text"> Tamanho: </div> 
+                            <div className = "card-planet"> {item.tam_planeta} Km </div> <br/>
+                            <div className = "card-text"> Massa: </div> 
+                            <div className = "card-planet"> {item.massa_planeta} </div> <br/>
+                            <div className = "card-text"> Gravidade: </div> 
+                            <div className = "card-planet"> {item.gravidade_planeta} </div> <br/>
+                            <div className = "card-text"> Descrição: </div> 
+                            <div className = "card-planet"> {item.comp_planeta} </div> <br/>
+                            <button className = "edit"> editar </button> 
+                            <button className = "delete"> deletar </button>
+                        </li>
+                    ))}
+                </ul>
             </div>
         )
     }

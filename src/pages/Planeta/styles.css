@@ -1,47 +1,31 @@
 .planeta{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: url("../../Images/Space-Background.jpg");
+    width: 95%;
     overflow: hidden;
+    margin: 20px auto;
+    padding: 20px auto;
+    border-style: groove ;
 }
 
-.card {
-    margin-right: auto;
-    width: 21%;
-    height: 30%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+.planeta ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.planeta ul li{
+    list-style: none;
+    float: left;
+    width: 20% ;
+    height: 300px;
+    margin: 40px 40px 0px 55px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 18px;
-    border: 20px;
-    background: white;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0);
+    background: linear-gradient(to bottom,#6500ad,#8707e2 );
+}
+
+.planeta ul li .planet-name {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: linear-gradient( to right, #e6e6e6, #c9c9c9 );
     text-align: center;
-}
-.delete button {
-	box-shadow: 3px 2px 0px 1px #990d00;
-	background:linear-gradient(to bottom, #b00c00 5%, #ff1100 100%);
-	background-color:#b00c00;
-	border-radius:13px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	font-weight:bold;
-	padding:10px 14px;
-	text-decoration:none;
-	text-shadow:0px 0px 0px #000000;
-}
-.delete button:hover {
-	background:linear-gradient(to bottom, #ff1100 5%, #b00c00 100%);
-	background-color:#ff1100;
-}
-.delete button:active {
-	position:relative;
-	top:1px;
+    border-style: outset;
 }
