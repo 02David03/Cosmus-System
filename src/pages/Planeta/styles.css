@@ -22,8 +22,26 @@
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0);
     text-align: center;
 }
-
-.card .delete {
-    width: 80px;
-    height: 40px;
+.delete button {
+	box-shadow: 3px 2px 0px 1px #990d00;
+	background:linear-gradient(to bottom, #b00c00 5%, #ff1100 100%);
+	background-color:#b00c00;
+	border-radius:13px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:10px 14px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #000000;
+}
+.delete button:hover {
+	background:linear-gradient(to bottom, #ff1100 5%, #b00c00 100%);
+	background-color:#ff1100;
+}
+.delete button:active {
+	position:relative;
+	top:1px;
 }

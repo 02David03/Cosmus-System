@@ -68,7 +68,7 @@ export default class Planets extends Component{
                         <div className = "card-planet"> {item.gravidade_planeta} </div> <br/>
                         <div className = "card-text"> Descrição: </div> 
                         <div className = "card-planet"> {item.comp_planeta} </div> <br/>
-                        <div className = "edicao"> <button> Editar </button> </div>
+                        <div className = "edit"> <button> editar </button> </div>
                     </div>
                 ))}
             </div>
