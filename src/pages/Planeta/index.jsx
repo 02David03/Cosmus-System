@@ -57,8 +57,6 @@ export default class Planets extends Component{
                     {planetas.map( item => (
                         <li>
                             <div className = "planet-name"> {item.nome_planeta}</div> <br/>
-                            <div className = "card-text"> ID: </div> 
-                            <div className = "card-planet"> {item.id_planeta}</div> <br/> 
                             <div className = "card-text"> Tamanho: </div> 
                             <div className = "card-planet"> {item.tam_planeta} Km </div> <br/>
                             <div className = "card-text"> Massa: </div> 
@@ -67,8 +65,10 @@ export default class Planets extends Component{
                             <div className = "card-planet"> {item.gravidade_planeta} </div> <br/>
                             <div className = "card-text"> Descrição: </div> 
                             <div className = "card-planet"> {item.comp_planeta} </div> <br/>
-                            <button className = "edit"> editar </button> 
-                            <button className = "delete"> deletar </button>
+                            <div className = "botoes"> 
+                                <a href = "#" className = "edit"> editar </a> 
+                                <a href = "#" className = "delete"> deletar </a>
+                            </div>
                         </li>
                     ))}
                 </ul>

@@ -2,8 +2,9 @@
     width: 95%;
     overflow: hidden;
     margin: 20px auto;
-    padding: 20px auto;
+    padding: 20px 0px;
     border-style: groove ;
+    box-shadow: 3px 2px 5px 1px gray;
 }
 
 .planeta ul {
@@ -14,18 +15,118 @@
 .planeta ul li{
     list-style: none;
     float: left;
-    width: 20% ;
-    height: 300px;
-    margin: 40px 40px 0px 55px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: linear-gradient(to bottom,#6500ad,#8707e2 );
+    width: 25% ;
+    height: 525px;
+    margin: 50px 70px 50px 70px;
+    background: linear-gradient(to bottom,#4b0082,#6c04b6 );
+    box-sizing: border-box;
+    border: 1px solid #a3a2a2;
+    border-radius: 20px;
+    box-shadow: 3px 2px 2px 1px #979797;
 }
-
+.planeta ul li:hover{
+    opacity: 0.96;
+}
+.planeta ul li .card-text {
+    color: white;
+    padding-left: 4px;
+    font-size: 22px;
+    font-family: monospace;
+    font-style: oblique;
+}
+.planeta ul li .card-planet {
+    color: rgb(190, 190, 190);
+    font-size: 16px;
+    margin-top: 2px;
+    padding-left: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-style: outset;
+    border-color: #500992;
+    border-radius: 15px;
+}
 .planeta ul li .planet-name {
     width: 100%;
     height: 50px;
+    font-size: 40px;
+    color: #6003a3;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 50px;
     background: linear-gradient( to right, #e6e6e6, #c9c9c9 );
     text-align: center;
     border-style: outset;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
 }
+
+.planeta ul li .botoes {
+  display: flex;
+  justify-content: space-between;
+
+}
+.planeta ul li .botoes .delete {
+	box-shadow:inset 0px 0px 0px 0px #f5b4ae;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border-radius:12px;
+	border:2px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	font-size:20px;
+	font-weight:bold;
+	padding:5px 30px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #b23e35;
+}
+.planeta ul li .botoes .delete:hover {
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+    background-color:#ce0100;
+}
+.planeta ul li .botoes.delete:active {
+	position:relative;
+	top:1px;
+}
+.planeta ul li .botoes .edit {
+	box-shadow:inset 0px 0px 0px 0px #1e459b;
+	background:linear-gradient(to bottom, #14388b 5%, #091a3f  100%);
+	background-color:#091292;
+	border-radius:12px;
+	border:2px solid #142d63;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	font-size:20px;
+	font-weight:bold;
+	padding:5px 30px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #b23e35;
+}
+.planeta ul li .botoes .edit:hover {
+	background:linear-gradient(to bottom, #091a3f 5%, #14388b 100%);
+    background-color:#091a3f;
+}
+.planeta ul li .botoes.edit:active {
+	position:relative;
+	top:1px;
+}
+
+@media screen and (max-width:1200px) {
+    .planeta ul li {
+        width: 40%;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .planeta{
+        width: 100%;
+        padding: 0%;
+    }
+    .container ul li {
+        float: none;
+        width: 90%;
+        margin: 40px auto;
+    }
+} 
