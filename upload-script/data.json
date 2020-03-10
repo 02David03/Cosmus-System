@@ -1,0 +1,40 @@
+{   
+    "planets" : [
+        {
+            "nome":"Mercurio",
+            "como_planeta":"42% de oxigênio, 29% de gás de sódio, 22% de hidrogênio, 6% de hélio e 0,5% de potássio.",
+            "id":"01",
+            "peso":"3,285 × 10^23 kg",
+            "possui_sn": true,
+            "satelite":"",
+            "sistema_plan":"",
+            "estrela":"",
+            "vel_rotacao":"16.754 km",
+            "tamanho":"4.879,4 km"
+        },
+        {
+            "nome":"Vênus",
+            "como_planeta":"dajdasojdadakankdnaskdna",
+            "id":"02",
+            "peso":"30kg",
+            "possui_sn":true,
+            "satelite":"",
+            "sistema_plan":"",
+            "vel_rotacao":"16.754 km",
+            "tamanho":"65644646",
+            "estrela":""
+        },
+        {
+            "nome":"Marte",
+            "como_planeta":"daskdnandkandand",
+            "id":"04",
+            "peso":"magrin",
+            "possui_sn":true,
+            "satelite":"",
+            "sistema_plan":"",
+            "vel_rotacao":"rapidão",
+            "tamanho":"medio",
+            "estrela":""
+        }
+    ]
+}

@@ -5,8 +5,8 @@ import Header from './components/Header';
 import Transition from './pages';
 import Routes from './routes';
 
-
 import "./styles.css";
+
 
 class App extends Component {
   constructor (props) {
@@ -19,7 +19,7 @@ class App extends Component {
   componentDidMount(){
     this.authListener();
   }
-
+  
   authListener () {
     fire.auth().onAuthStateChanged((user) => {
       if(user) {
