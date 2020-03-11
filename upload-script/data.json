@@ -2,7 +2,7 @@
     "planets" : [
         {
             "nome":"Mercurio",
-            "como_planeta":"42% de oxigênio, 29% de gás de sódio, 22% de hidrogênio, 6% de hélio e 0,5% de potássio.",
+            "comp_planeta":"42% de oxigênio, 29% de gás de sódio, 22% de hidrogênio, 6% de hélio e 0,5% de potássio.",
             "id":"01",
             "peso":"3,285 × 10^23 kg",
             "possui_sn": true,
@@ -14,7 +14,7 @@
         },
         {
             "nome":"Vênus",
-            "como_planeta":"dajdasojdadakankdnaskdna",
+            "comp_planeta":"dajdasojdadakankdnaskdna",
             "id":"02",
             "peso":"30kg",
             "possui_sn":true,
@@ -26,7 +26,7 @@
         },
         {
             "nome":"Marte",
-            "como_planeta":"daskdnandkandand",
+            "comp_planeta":"daskdnandkandand",
             "id":"04",
             "peso":"magrin",
             "possui_sn":true,
@@ -35,6 +35,125 @@
             "vel_rotacao":"rapidão",
             "tamanho":"medio",
             "estrela":""
+        }
+    ],
+
+    "estrela" : [
+        {
+            "buraco_negro":false,
+            "dist_terra":"78000km",
+            "id":"01",
+            "idade":"3000000000",
+            "morte":false,
+            "nome":"Sol",
+            "planeta":"Terra",
+            "possui_sn":true,
+            "satelite":"Juno",
+            "sistema_plan":"Via Láctea",
+            "tamanho":"1000000km",
+            "tipo":"Gigante Vermelha"
+        },
+        {
+            "buraco_negro":false,
+            "dist_terra":"4500000km",
+            "id":"02",
+            "idade":"15000000000",
+            "morte":false,
+            "nome":"Hélio",
+            "planeta":"Marte",
+            "possui_sn":false,
+            "satelite":"",
+            "sistema_plan":"Andromeda",
+            "tamanho":"2567000km",
+            "tipo":"Gigante Azul"
+        },
+        {
+            "buraco_negro":false,
+            "dist_terra":"145000km",
+            "id":"03",
+            "idade":"475000000000",
+            "morte":true,
+            "nome":"S01-376",
+            "planeta":"Maralto",
+            "possui_sn":false,
+            "satelite":"",
+            "sistema_plan":"V14-K32",
+            "tamanho":"700000km",
+            "tipo":"Anã Vermelha"
+        }
+    ],
+
+    "galaxia" : [
+        {
+            "dist_terra":"65420000km",
+            "id":"01",
+            "nome":"Olho Negro",
+            "qt_sistema":5,
+            "sistema_plan":"Andromeda"
+        },
+        {
+            "dist_terra":"370000km",
+            "id":"02",
+            "nome":"Triângulo",
+            "qt_sistema":6,
+            "sistema_plan":"V14-K32"
+        },
+        {
+            "dist_terra":"0km",
+            "id":"03",
+            "nome":"Via Láctea",
+            "qt_sistema":25,
+            "sistema_plan":"Via Láctea"
+        }
+    ],
+
+    "satelite" : [
+        {
+            "composicao":"",
+            "id":"01",
+            "nome":"Lua",
+            "orbita":"Terra",
+            "peso":"475215kg",
+            "tamanho":"236362km"
+        },
+        {
+            "composicao":"",
+            "id":"02",
+            "nome":"Juno",
+            "orbita":"Júpiter",
+            "peso":"41357345kg",
+            "tamanho":"86853km"
+        },
+        {
+            "composicao":"",
+            "id":"03",
+            "nome":"Ganímedes",
+            "orbita":"Saturno",
+            "peso":"7855354kg",
+            "tamanho":"345358km"
+        }
+    ],
+
+    "sistema_planetario" : [
+        {
+            "estrela":"Sol",
+            "galaxia":"Via Láctea",
+            "id":"01",
+            "idade":"7854575",
+            "nome":"Sistema Solar",
+            "planeta":"Terra",
+            "qtd_estrelas":1,
+            "qtd_planetas":9
+        },
+        {
+            "estrela":"Hélio",
+            "galaxia":"Andromeda",
+            "id":"02",
+            "idade":"659973",
+            "nome":"Sistema Escolar",
+            "planeta":"Plutinho",
+            "qtd_estrelas":3,
+            "qtd_planetas":8
         }
     ]
 }

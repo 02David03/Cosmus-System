@@ -22,10 +22,10 @@ export default class Main extends Component{
                     { entidade : "Planeta",
                     description: "Um planeta é um corpo celeste que possui massa o suficiente para se tornar esférico pela sua própria gravidade."
                     },
-                    { entidade : "Satelite Natural",
+                    { entidade : "Satelite-Natural",
                     description: "Um satélite natural é um corpo celeste qualquer que orbita um corpo celeste maior que ele, como o caso da lua orbitando a terra por exemplo."
                     },
-                    { entidade : "Sistema Platenario",
+                    { entidade : "Sistema-Planetario",
                     description: "Um conjunto de planetas e/ou corpos não estelares em orbita de uma estrela é chamado de sistema planetário."
                     },
                     {

@@ -12,7 +12,7 @@ export default class Planets extends Component{
     
     async componentDidMount(){
         const db = fire.firestore()
-        db.collection("planets").get().then(querySnapshot =>{
+        db.collection("sistema_planetario").get().then(querySnapshot =>{
         var documento = [];
             querySnapshot.forEach(doc => {
             documento.push({...doc.data(), ...{id:doc.id}});
@@ -23,22 +23,22 @@ export default class Planets extends Component{
     }
      
     render(){
-        const planet = this.state.documents;
+        const sistema_plan = this.state.documents;
         
         return(
             <div className = "planeta">
                 <ul>
-                    {planet.map( planet => (
-                        <li key = {planet.id}>
-                            <div className = "planet-name"> {planet.nome}</div> <br/>
-                            <div className = "card-text"> Tamanho: </div> 
-                            <div className = "card-planet"> {planet.tamanho} Km </div> <br/>
-                            <div className = "card-text"> Massa: </div> 
-                            <div className = "card-planet"> {planet.peso} </div> <br/>
-                            <div className = "card-text"> Velocidade de rotação: </div> 
-                            <div className = "card-planet"> {planet.vel_rotacao} </div> <br/>
-                            <div className = "card-text"> Composição: </div> 
-                            <div className = "card-planet"> {planet.como_planeta} </div> <br/>
+                    {sistema_plan.map( item => (
+                        <li key = {item.id}>
+                            <div className = "planet-name"> {item.nome}</div> <br/>
+                            <div className = "card-text"> Estrelas: </div> 
+                            <div className = "card-planet"> {item.estrela} </div> <br/>
+                            <div className = "card-text"> Galaxia: </div> 
+                            <div className = "card-planet"> {item.galaxia} </div> <br/>
+                            <div className = "card-text"> Idade: </div> 
+                            <div className = "card-planet"> {item.idade} </div> <br/>
+                            <div className = "card-text"> Planeta: </div> 
+                            <div className = "card-planet"> {item.planeta} </div> <br/>
                             <div className = "botoes"> 
                                 <a href = "#" className = "edit"> Editar </a> 
                                 <a href = "#" className = "delete"> Excluir </a>
