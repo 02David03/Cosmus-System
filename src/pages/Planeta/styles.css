@@ -1,10 +1,13 @@
+@font-face {
+    font-family: planet;
+    src: url(planetncompact.ttf);
+}
+
 .planeta{
-    width: 95%;
     overflow: hidden;
-    margin: 20px auto;
-    padding: 20px 0px;
     border-style: groove ;
     box-shadow: 3px 2px 5px 1px gray;
+    background: linear-gradient(to bottom,#1e0070,#000000 );
 }
 
 .planeta ul {
@@ -18,14 +21,14 @@
     width: 25% ;
     height: 525px;
     margin: 50px 70px 50px 70px;
-    background: linear-gradient(to bottom,#4b0082,#6c04b6 );
+    background: linear-gradient(to bottom,#1e0070,#000000 );
     box-sizing: border-box;
     border: 1px solid #a3a2a2;
     border-radius: 20px;
     box-shadow: 3px 2px 2px 1px #979797;
 }
 .planeta ul li:hover{
-    opacity: 0.96;
+    opacity: 0.93;
 }
 .planeta ul li .card-text {
     color: white;
@@ -41,15 +44,16 @@
     padding-left: 8px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-style: outset;
-    border-color: #500992;
+    border-color: #190158bd;
     border-radius: 15px;
 }
 .planeta ul li .planet-name {
     width: 100%;
     height: 50px;
     font-size: 40px;
-    color: #6003a3;
-    font-family: 'Times New Roman', Times, serif;
+    color: #1e0070;
+    /*font-family: 'Times New Roman', Times, serif;*/
+    font-family: planet;
     line-height: 50px;
     background: linear-gradient( to right, #e6e6e6, #c9c9c9 );
     text-align: center;
@@ -65,10 +69,10 @@
 }
 .planeta ul li .botoes .delete {
 	box-shadow:inset 0px 0px 0px 0px #f5b4ae;
-	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
-	background-color:#fe1a00;
+	background:linear-gradient(to bottom, #6a0381 5%, rgb(59, 6, 75) 100%);
+	background-color:#6a0381;
 	border-radius:12px;
-	border:2px solid #d83526;
+	border:2px solid #6a0381;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -77,11 +81,12 @@
 	font-weight:bold;
 	padding:5px 30px;
 	text-decoration:none;
-	text-shadow:0px 0px 0px #b23e35;
+    text-shadow:0px 0px 0px #b23e35;
+    margin-right: 10px;
 }
 .planeta ul li .botoes .delete:hover {
-	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
-    background-color:#ce0100;
+	background:linear-gradient(to bottom, rgb(59, 6, 75) 5%, #6a0381 100%);
+    background-color:rgb(59, 6, 75);
 }
 .planeta ul li .botoes.delete:active {
 	position:relative;
@@ -89,10 +94,10 @@
 }
 .planeta ul li .botoes .edit {
 	box-shadow:inset 0px 0px 0px 0px #1e459b;
-	background:linear-gradient(to bottom, #14388b 5%, #091a3f  100%);
-	background-color:#091292;
+	background:linear-gradient(to bottom, #6a0381 5%, rgb(59, 6, 75) 100%);
+	background-color:#6a0381;
 	border-radius:12px;
-	border:2px solid #142d63;
+	border:2px solid #6a0381;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -101,11 +106,12 @@
 	font-weight:bold;
 	padding:5px 30px;
 	text-decoration:none;
-	text-shadow:0px 0px 0px #b23e35;
+    text-shadow:0px 0px 0px #b23e35;
+    margin-left: 10px;
 }
 .planeta ul li .botoes .edit:hover {
-	background:linear-gradient(to bottom, #091a3f 5%, #14388b 100%);
-    background-color:#091a3f;
+	background:linear-gradient(to bottom, rgb(59, 6, 75) 5%, #6a0381 100%);
+    background-color:rgb(59, 6, 75);
 }
 .planeta ul li .botoes.edit:active {
 	position:relative;
