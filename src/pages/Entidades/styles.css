@@ -15,7 +15,7 @@
     margin: 0px;
 }
 
-.planeta ul li{
+.planeta ul .card{
     list-style: none;
     float: left;
     width: 25% ;

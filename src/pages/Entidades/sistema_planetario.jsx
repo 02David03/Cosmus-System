@@ -29,7 +29,7 @@ export default class Planets extends Component{
             <div className = "planeta">
                 <ul>
                     {sistema_plan.map( item => (
-                        <li key = {item.id}>
+                        <li className = "cards" key = {item.id}>
                             <div className = "planet-name"> {item.nome}</div> <br/>
                             <div className = "card-text"> Estrelas: </div> 
                             <div className = "card-planet"> {item.estrela} </div> <br/>

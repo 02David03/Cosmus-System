@@ -7,7 +7,7 @@ import Satelite from "./pages/Entidades/satelite";
 import Sistema_plan from "./pages/Entidades/sistema_planetario";
 import Planeta from "./pages/Entidades/planeta";
 import Main from "./pages/main";
-
+import Planet_edit from "./pages/Entidades/Adicao/planeta_edit";
 
 const Routes = () => (
     <BrowserRouter>
@@ -17,7 +17,9 @@ const Routes = () => (
             <Route path = "/Galaxia" component = {Galaxia}/>
             <Route path = "/Satelite-Natural" component = {Satelite}/>
             <Route path = "/Sistema-Planetario" component = {Sistema_plan}/>
-            <Route path ="/Planeta" component={Planeta} />
+            <Route path = "/Planeta" component={Planeta} />
+            <Route path = "/planet_edit" component = {Planet_edit}/>
+
         </Switch>
     </BrowserRouter>
 );

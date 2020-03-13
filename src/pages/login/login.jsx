@@ -43,6 +43,7 @@ export class Login extends Component {
                     </div>
                     <div className = 'form-group'>
                         <label htmlFor = "password">Senha</label>
+
                         <input value = {this.setState.password} onChange = {this.handleChange} type = "password" name ="password"placeholder="Insira a sua senha"/>
                     </div>
                 </div>

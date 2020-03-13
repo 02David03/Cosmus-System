@@ -1,12 +1,13 @@
 import React, {Component}  from 'react';
 import "./styles.css";
 import fire from "../../config/Fire";
+import { Link } from 'react-router-dom';
 
 export default class Planets extends Component{
     constructor(props){
         super(props);
         this.state = {
-            documents : []
+            documents : [],
         }
     }
     
@@ -16,11 +17,12 @@ export default class Planets extends Component{
         var documento = [];
             querySnapshot.forEach(doc => {
             documento.push({...doc.data(), ...{id:doc.id}});
-            console.log(documento);
         });
         this.setState({documents : documento})
     });
     }
+
+    
      
     render(){
         const planet = this.state.documents;
@@ -29,7 +31,7 @@ export default class Planets extends Component{
             <div className = "planeta">
                 <ul>
                     {planet.map( planet => (
-                        <li key = {planet.id}>
+                        <li className = "card" key = {planet.id}>
                             <div className = "planet-name"> {planet.nome}</div> <br/>
                             <div className = "card-text"> Tamanho: </div> 
                             <div className = "card-planet"> {planet.tamanho}  </div> <br/>
@@ -45,6 +47,7 @@ export default class Planets extends Component{
                             </div>
                         </li>
                     ))}
+                    <div className = "card"> <Link to = "./planet_edit" className = "addBtn"> + </Link> </div>
                 </ul>
             </div>
         )
