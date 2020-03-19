@@ -1,20 +1,21 @@
 import React, {Component}  from 'react';
-
+import { withRouter } from 'react-router-dom';
 import fire from "../../../config/Fire";
 
-export default class Planets extends Component{
+
+class PlanetEdit extends Component{
+    
     constructor(props){
         super(props);
+        this.getInput = this.getInput.bind(this);
+        this.setInput = this.setInput.bind(this);
         this.state = {
                 nome : "",
                 tamanho : "",
                 peso : "",
                 vel_rotacao : "",
-                como_planeta : ""
+                como_planeta : "",
         }
-        
-        this.getInput = this.getInput.bind(this);
-        this.setInput = this.setInput.bind(this);
     }
     
     getInput(event) {
@@ -29,6 +30,11 @@ export default class Planets extends Component{
         } else if (event.target.name === "como_planeta"){
             this.setState({como_planeta : event.target.value})
         }
+
+    }
+    redirectToPlanet = () => {
+        const {history} = this.props;
+        if (history) history.push('/Planeta');
     }
 
     setInput() {
@@ -36,9 +42,11 @@ export default class Planets extends Component{
         const newPlanet = db.collection("planets").doc()
         newPlanet.set( 
            this.state
-        );        
+        );
+        this.redirectToPlanet();  
     }   
 
+    
     render(){ 
         return(
             <div className = "edicao">
@@ -59,3 +67,5 @@ export default class Planets extends Component{
         )
     }
 }
+
+export default withRouter(PlanetEdit);

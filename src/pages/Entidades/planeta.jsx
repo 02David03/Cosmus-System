@@ -2,13 +2,17 @@ import React, {Component}  from 'react';
 import "./styles.css";
 import fire from "../../config/Fire";
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-export default class Planets extends Component{
+class Planets extends Component{
+
     constructor(props){
         super(props);
+        this.delete = this.delete.bind(this);
         this.state = {
             documents : [],
         }
+
     }
     
     async componentDidMount(){
@@ -22,6 +26,17 @@ export default class Planets extends Component{
     });
     }
 
+    delete(e) {
+        const db = fire.firestore()
+        db.collection("planets").doc(e.id).delete();
+        db.collection("planets").get().then(querySnapshot =>{
+            var documento = [];
+                querySnapshot.forEach(doc => {
+                documento.push({...doc.data(), ...{id:doc.id}});
+            });
+            this.setState({documents : documento})
+        });
+    } 
     
      
     render(){
@@ -30,20 +45,20 @@ export default class Planets extends Component{
         return(
             <div className = "planeta">
                 <ul>
-                    {planet.map( planet => (
-                        <li className = "card" key = {planet.id}>
-                            <div className = "planet-name"> {planet.nome}</div> <br/>
+                    {planet.map( item => (
+                        <li className = "card">
+                            <div className = "planet-name"> {item.nome}</div> <br/>
                             <div className = "card-text"> Tamanho: </div> 
-                            <div className = "card-planet"> {planet.tamanho}  </div> <br/>
+                            <div className = "card-planet"> {item.tamanho}  </div> <br/>
                             <div className = "card-text"> Massa: </div> 
-                            <div className = "card-planet"> {planet.peso} </div> <br/>
+                            <div className = "card-planet"> {item.peso} </div> <br/>
                             <div className = "card-text"> Velocidade de rotação: </div> 
-                            <div className = "card-planet"> {planet.vel_rotacao} </div> <br/>
+                            <div className = "card-planet"> {item.vel_rotacao} </div> <br/>
                             <div className = "card-text"> Composição: </div> 
-                            <div className = "card-planet"> {planet.como_planeta} </div> <br/>
+                            <div className = "card-planet"> {item.como_planeta} </div> <br/>
                             <div className = "botoes"> 
                                 <a href = "#" className = "edit"> Editar </a> 
-                                <a href = "#" className = "delete"> Excluir </a>
+                                <button className = "delete" onClick = {() => this.delete(item)}> Excluir </button>
                             </div>
                         </li>
                     ))}
@@ -54,3 +69,5 @@ export default class Planets extends Component{
     }
     
 }
+
+export default withRouter(Planets);

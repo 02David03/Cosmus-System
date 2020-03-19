@@ -21,6 +21,7 @@ export default class Planets extends Component{
         this.setState({documents : documento})
     });
     }
+
      
     render(){
         const galaxia = this.state.documents;
@@ -39,7 +40,7 @@ export default class Planets extends Component{
                             <div className = "card-planet"> {item.qt_sistema} </div> <br/>
                             <div className = "botoes"> 
                                 <a href = "#" className = "edit"> Editar </a> 
-                                <a href = "#" className = "delete"> Excluir </a>
+                                <button className = "delete"> Excluir </button>
                             </div>
                         </li>
                     ))}

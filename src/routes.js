@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
 import Estrela from "./pages/Entidades/estrela";
 import Galaxia from "./pages/Entidades/galaxia";
 import Satelite from "./pages/Entidades/satelite";
@@ -19,7 +18,7 @@ const Routes = () => (
             <Route path = "/Sistema-Planetario" component = {Sistema_plan}/>
             <Route path = "/Planeta" component={Planeta} />
             <Route path = "/planet_edit" component = {Planet_edit}/>
-
+    
         </Switch>
     </BrowserRouter>
 );
