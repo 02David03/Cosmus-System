@@ -1,13 +1,18 @@
 import React, {Component}  from 'react';
 import "./styles.css";
 import fire from "../../config/Fire";
+import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-export default class Planets extends Component{
+class Satelite extends Component{
+
     constructor(props){
         super(props);
+        this.delete = this.delete.bind(this);
         this.state = {
-            documents : []
+            documents : [],
         }
+
     }
     
     async componentDidMount(){
@@ -16,37 +21,51 @@ export default class Planets extends Component{
         var documento = [];
             querySnapshot.forEach(doc => {
             documento.push({...doc.data(), ...{id:doc.id}});
-            console.log(documento);
         });
         this.setState({documents : documento})
     });
     }
 
+    delete(e) {
+        const db = fire.firestore()
+        db.collection("galaxia").doc(e.id).delete();
+        db.collection("galaxia").get().then(querySnapshot =>{
+            var documento = [];
+                querySnapshot.forEach(doc => {
+                documento.push({...doc.data(), ...{id:doc.id}});
+            });
+            this.setState({documents : documento})
+        });
+    } 
+    
      
     render(){
-        const galaxia = this.state.documents;
+        const estrela = this.state.documents;
         
         return(
             <div className = "planeta">
                 <ul>
-                    {galaxia.map( item => (
-                        <li key = {item.id}>
+                    {estrela.map( item => (
+                        <li key = {item.id} className = "card">
                             <div className = "planet-name"> {item.nome}</div> <br/>
-                            <div className = "card-text"> Distancia da terra: </div> 
+                            <div className = "card-text"> Distância da terra: </div> 
                             <div className = "card-planet"> {item.dist_terra}  </div> <br/>
-                            <div className = "card-text"> Tamanho: </div> 
-                            <div className = "card-planet"> {item.tamanho} </div> <br/>
-                            <div className = "card-text"> Quantidade de Sistemas </div> 
+                            <div className = "card-text"> Quantidade de Sistemas: </div> 
                             <div className = "card-planet"> {item.qt_sistema} </div> <br/>
+                            <div className = "card-text"> Sistemas Planetarios: </div> 
+                            <div className = "card-planet"> {item.sistema_plan} </div> <br/>
                             <div className = "botoes"> 
-                                <a href = "#" className = "edit"> Editar </a> 
-                                <button className = "delete"> Excluir </button>
+                                <button  className = "edit"> <Link to = { `Galaxia_edit/${item.id}`} > Editar  </Link> </button>
+                                <button className = "delete" onClick = {() => this.delete(item)}> Excluir </button>
                             </div>
                         </li>
                     ))}
+                    <div className = "card"> <Link to = "/Galaxia_add" className = "addBtn"> + </Link> </div>
                 </ul>
             </div>
         )
     }
     
 }
+
+export default withRouter(Satelite);
