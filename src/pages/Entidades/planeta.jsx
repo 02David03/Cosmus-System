@@ -46,7 +46,7 @@ class Planets extends Component{
             <div className = "planeta">
                 <ul>
                     {planet.map( item => (
-                        <li className = "card">
+                        <li key = {item.id} className = "card">
                             <div className = "planet-name"> {item.nome}</div> <br/>
                             <div className = "card-text"> Tamanho: </div> 
                             <div className = "card-planet"> {item.tamanho}  </div> <br/>
@@ -55,14 +55,14 @@ class Planets extends Component{
                             <div className = "card-text"> Velocidade de rotação: </div> 
                             <div className = "card-planet"> {item.vel_rotacao} </div> <br/>
                             <div className = "card-text"> Composição: </div> 
-                            <div className = "card-planet"> {item.como_planeta} </div> <br/>
+                            <div className = "card-planet"> {item.comp_planeta} </div> <br/>
                             <div className = "botoes"> 
-                                <a href = "#" className = "edit"> Editar </a> 
+                                <button  className = "edit"> <Link to = { `/Planeta_edit/${item.id}`} > Editar  </Link> </button>
                                 <button className = "delete" onClick = {() => this.delete(item)}> Excluir </button>
                             </div>
                         </li>
                     ))}
-                    <div className = "card"> <Link to = "./planet_edit" className = "addBtn"> + </Link> </div>
+                    <div className = "card"> <Link to = "/Planeta_add" className = "addBtn"> + </Link> </div>
                 </ul>
             </div>
         )

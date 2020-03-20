@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import fire from "../../../config/Fire";
 
 
-class PlanetEdit extends Component{
+class PlanetAdd extends Component{
     
     constructor(props){
         super(props);
@@ -30,6 +30,7 @@ class PlanetEdit extends Component{
         } else if (event.target.name === "comp_planeta"){
             this.setState({comp_planeta : event.target.value})
         }
+
     }
     redirectToPlanet = () => {
         const {history} = this.props;
@@ -37,8 +38,8 @@ class PlanetEdit extends Component{
     }
 
     setInput() {
-        const db = fire.firestore()
-        const newPlanet = db.collection("planets").doc(this.props.match.params.id);
+        const db = fire.firestore();
+        const newPlanet = db.collection("planets").doc();
         newPlanet.set( 
            this.state
         );
@@ -67,4 +68,4 @@ class PlanetEdit extends Component{
     }
 }
 
-export default withRouter(PlanetEdit);
+export default withRouter(PlanetAdd);
