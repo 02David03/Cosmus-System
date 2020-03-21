@@ -8,12 +8,22 @@ export class Login extends Component {
     constructor(props) {
         super(props);
         this.login = this.login.bind(this);
+        this.signUp = this.signUp.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.state = {
             email:'',
             password: '',
 
         }
+    }
+
+    signUp(e) {
+        e.preventDefault();
+        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then ((u) => {    
+        })
+        .catch((error) => {
+            alert(error);
+        });
     }
 
     login(e) {
@@ -51,6 +61,9 @@ export class Login extends Component {
             <div className = "footer">
                 <button type = "submit" onClick = {this.login} className = "btn">
                     Entrar
+                </button>
+                <button type = "submit" onClick = {this.signUp} className = "btn">
+                    Registrar
                 </button>
             </div>
         </div>
