@@ -1,6 +1,7 @@
 import React, {Component}  from 'react';
 import { withRouter } from 'react-router-dom';
 import fire from "../../../config/Fire";
+import "./styles.css";
 
 
 class Sistema_planAdd extends Component{

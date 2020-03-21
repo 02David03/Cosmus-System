@@ -2,12 +2,16 @@
     font-family: planet;
     src: url(../../fonts/planetncompact.ttf);
 }
+@font-face{
+    font-family: coalition;
+    src: url(../../fonts/Coalition_v2..ttf)
+}
 
 .planeta{
     overflow: hidden;
     border-style: groove ;
-    box-shadow: 3px 2px 5px 1px gray;
-    background: linear-gradient(to bottom,#1e0070,#000000 );
+    background-image: url(../../Images/Space-Background.jpg);
+    background-attachment: fixed;
 }
 
 .planeta ul {
@@ -92,7 +96,7 @@
 	position:relative;
 	top:1px;
 }
-.planeta ul li .botoes .edit {
+.planeta ul li .botoes .edit{
 	box-shadow:inset 0px 0px 0px 0px #1e459b;
 	background:linear-gradient(to bottom, #6a0381 5%, rgb(59, 6, 75) 100%);
 	background-color:#6a0381;
@@ -104,10 +108,28 @@
 	font-family:Courier New;
 	font-size:20px;
 	font-weight:bold;
-	padding:5px 30px;
-	text-decoration:none;
+    padding:5px 30px;
+    text-decoration: none;
     text-shadow:0px 0px 0px #b23e35;
     margin-left: 10px;
+}
+.planeta ul li .botoes Link{
+    text-decoration: none;
+}
+.planeta ul li .botoes Link:focus{
+    text-decoration: none;
+}
+.planeta ul li .botoes Link:hover{
+    text-decoration: none;
+}
+.planeta ul li .botoes Link:visited{
+    text-decoration: none;
+}
+.planeta ul li .botoes Link:link{
+    text-decoration: none;
+}
+.planeta ul li .botoes Link:active{
+    text-decoration: none;
 }
 .planeta ul li .botoes .edit:hover {
 	background:linear-gradient(to bottom, rgb(59, 6, 75) 5%, #6a0381 100%);
@@ -116,6 +138,20 @@
 .planeta ul li .botoes.edit:active {
 	position:relative;
 	top:1px;
+}
+
+.planeta ul .card .addBtn{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 400px;
+    border: none;
+    color:  #6a0381;
+    text-shadow: 5px 5px 1px black;
+}
+.planeta ul .card .addBtn:hover{
+    opacity: 80%;
 }
 
 @media screen and (max-width:1200px) {

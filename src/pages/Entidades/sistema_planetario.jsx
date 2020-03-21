@@ -61,7 +61,7 @@ class Sistema_planetario extends Component{
                             <div className = "card-text"> Quantidade de Planetas: </div> 
                             <div className = "card-planet"> {item.qtd_planetas} </div> <br/>
                             <div className = "botoes"> 
-                                <button  className = "edit"> <Link to = { `Sistema-Planetario_edit/${item.id}`} > Editar  </Link> </button>
+                                <Link to = { `Sistema-Planetario_edit/${item.id}`} > <button  className = "edit">  Editar   </button> </Link>
                                 <button className = "delete" onClick = {() => this.delete(item)}> Excluir </button>
                             </div>
                         </li>

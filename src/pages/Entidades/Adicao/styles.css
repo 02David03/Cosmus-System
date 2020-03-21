@@ -1,0 +1,39 @@
+.edicao{
+    box-shadow: 3px 2px 5px 1px gray;
+    background: linear-gradient(to bottom,#1e0070,#000000 );
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.edicao .Title{
+    font-size: 20px;
+    font-family: monospace;
+    font-style: oblique;
+    color: white;
+}
+
+.edicao input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 10%;
+    background:linear-gradient(to bottom, #6a0381 5%, rgb(59, 6, 75) 100%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 90%;
+}
+input[type=submit]:hover{
+    background:linear-gradient(to bottom, rgb(59, 6, 75) 5%, #6a0381 100%);
+}
