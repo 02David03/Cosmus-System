@@ -4,8 +4,8 @@
     border-radius: 5px;
     padding: 20px;
     margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 .edicao .Title{
     font-size: 20px;
@@ -15,7 +15,16 @@
 }
 
 .edicao input{
-    width: 100%;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.edicao select{
+    width: 35%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;

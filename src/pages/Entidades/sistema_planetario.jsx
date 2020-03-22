@@ -44,6 +44,8 @@ class Sistema_planetario extends Component{
         
         return(
             <div className = "planeta">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+                <Link to = "/"><button class="btn"><i class="fa fa-home"></i> Home</button></Link>
                 <ul>
                     {estrela.map( item => (
                         <li key = {item.id} className = "card">

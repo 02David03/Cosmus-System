@@ -44,6 +44,8 @@ class Planets extends Component{
         
         return(
             <div className = "planeta">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+                <Link to = "/"><button class="btn"><i class="fa fa-home"></i> Home</button></Link>
                 <ul>
                     {planet.map( item => (
                         <li key = {item.id} className = "card">
@@ -57,7 +59,7 @@ class Planets extends Component{
                             <div className = "card-text"> Composição: </div> 
                             <div className = "card-planet"> {item.comp_planeta} </div> <br/>
                             <div className = "botoes"> 
-                                <button  className = "edit"> <Link to = { `/Planeta_edit/${item.id}`} > Editar  </Link> </button>
+                                <Link to = { `Sistema-Planetario_edit/${item.id}`} > <button  className = "edit">  Editar   </button> </Link>
                                 <button className = "delete" onClick = {() => this.delete(item)}> Excluir </button>
                             </div>
                         </li>

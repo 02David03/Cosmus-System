@@ -17,8 +17,9 @@ import Sistema_plan_add from "./pages/Entidades/Adicao/sistema_plan_add";
 import Sistema_plan_edit from "./pages/Entidades/Adicao/sistema_plan_edit";
 import Orbita from "./pages/Entidades/orbita";
 import Orbita_add from "./pages/Entidades/Adicao/orbita_add";
-import Orbita_edit from "./pages/Entidades/Adicao/orbita_edit"
+import Orbita_edit from "./pages/Entidades/Adicao/orbita_edit";
 import Main from "./pages/main";
+
 
 
 
@@ -43,7 +44,7 @@ const Routes = () => (
             <Route path = "/Satelite-Natural_edit/:id" component = {Satelite_edit}/>
             <Route path = "/Sistema-Planetario" component = {Sistema_plan}/>
             <Route path = "/Sistema-Planetario_add" component = {Sistema_plan_add}/>
-            <Route path = "/Sistema-Planetario_edit/:id" component = {Sistema_plan_edit}/> 
+            <Route path = "/Sistema-Planetario_edit/:id" component = {Sistema_plan_edit}/>
         </Switch>
     </BrowserRouter>
 );
