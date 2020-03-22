@@ -16,46 +16,46 @@
 .LogOut .outBtn:focus {
     outline: none;
 }
-.product-list {
-    max-width: 1000px;
+.entidade-list {
+    max-width: 1200px;
     margin: 20px auto 0;
     padding: 0 20px;
 }
 
-.product-list Link {
+.entidade-list Link {
     text-decoration: none;
 }
-.product-list Link:focus{
+.entidade-list Link:focus{
     text-decoration: none;
 }
-.product-list Link:hover{
+.entidade-list Link:hover{
     text-decoration: none;
 }
-.product-list Link:visited{
+.entidade-list Link:visited{
     text-decoration: none;
 }
-.product-list Link:link{
+.entidade-list Link:link{
     text-decoration: none;
 }
-.product-list Link:active{
+.entidade-list Link:active{
     text-decoration: none;
 }
-.product-list article {
+.entidade-list article {
     background: linear-gradient(to bottom,#4b0082,#6c04b6 );
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
 }
-.product-list article:hover {
+.entidade-list article:hover {
     background: linear-gradient(to bottom,#6500ad,#8707e2 );
     cursor: pointer;
 }
-.product-list article strong {
+.entidade-list article strong {
     font-size: 20px;
     color: white;
 }
-.product-list article p {
+.entidade-list article p {
     font-size:  16px;
     color: #999;
     margin-top: 5px;
@@ -66,5 +66,4 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
 }

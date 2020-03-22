@@ -15,6 +15,9 @@ import Satelite_edit from "./pages/Entidades/Adicao/satelite_edit";
 import Sistema_plan from "./pages/Entidades/sistema_planetario";
 import Sistema_plan_add from "./pages/Entidades/Adicao/sistema_plan_add";
 import Sistema_plan_edit from "./pages/Entidades/Adicao/sistema_plan_edit";
+import Orbita from "./pages/Entidades/orbita";
+import Orbita_add from "./pages/Entidades/Adicao/orbita_add";
+import Orbita_edit from "./pages/Entidades/Adicao/orbita_edit"
 import Main from "./pages/main";
 
 
@@ -29,6 +32,9 @@ const Routes = () => (
             <Route path = "/Galaxia" component = {Galaxia}/>
             <Route path = "/Galaxia_add" component = {Galaxia_add}/>
             <Route path = "/Galaxia_edit/:id" component = {Galaxia_edit}/>
+            <Route path = "/Orbitas" component = {Orbita} />
+            <Route path = "/Orbitas_add" component = {Orbita_add}/>
+            <Route path = "/Orbitas_edit" component = {Orbita_edit}/>
             <Route path = "/Planeta" component={Planeta} />
             <Route path = "/Planeta_add" component = {Planet_add}/>
             <Route path = "/Planeta_edit/:id" component = {Planet_edit}/>
@@ -37,7 +43,7 @@ const Routes = () => (
             <Route path = "/Satelite-Natural_edit/:id" component = {Satelite_edit}/>
             <Route path = "/Sistema-Planetario" component = {Sistema_plan}/>
             <Route path = "/Sistema-Planetario_add" component = {Sistema_plan_add}/>
-            <Route path = "/Sistema-Planetario_edit/:id" component = {Sistema_plan_edit}/>
+            <Route path = "/Sistema-Planetario_edit/:id" component = {Sistema_plan_edit}/> 
         </Switch>
     </BrowserRouter>
 );

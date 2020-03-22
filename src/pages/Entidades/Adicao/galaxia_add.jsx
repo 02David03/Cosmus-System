@@ -4,7 +4,7 @@ import fire from "../../../config/Fire";
 import "./styles.css";
 
 
-class GalaxiaAdd extends Component{
+class GalaxiaEdit extends Component{
     
     constructor(props){
         super(props);
@@ -64,4 +64,4 @@ class GalaxiaAdd extends Component{
     }
 }
 
-export default withRouter(GalaxiaAdd);
+export default withRouter(GalaxiaEdit);

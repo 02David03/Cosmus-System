@@ -8,8 +8,9 @@
 }
 
 .planeta{
-    overflow: hidden;
-    border-style: groove ;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
     background-image: url(../../Images/Space-Background.jpg);
     background-attachment: fixed;
 }
@@ -23,6 +24,7 @@
     list-style: none;
     float: left;
     width: 25% ;
+    min-width: 400px;
     height: 525px;
     margin: 50px 70px 50px 70px;
     background: linear-gradient(to bottom,#1e0070,#000000 );

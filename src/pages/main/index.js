@@ -29,8 +29,8 @@ export default class Main extends Component{
                     description: "Um conjunto de planetas e/ou corpos não estelares em orbita de uma estrela é chamado de sistema planetário."
                     },
                     {
-                     entidade: "Relações Planetarias",
-                    description: "Aqui é onde é mostrado e também onde será criada as relações entre planetas estrelas e satélites naturais"
+                     entidade: "Orbitas",
+                    description: "Orbitas que podem ser compostas por Estrelas, Planetas e Satélites naturais"
                     }
         ]
     }
@@ -44,7 +44,7 @@ export default class Main extends Component{
         return(
             <div className = 'LogOut'>
                 <button className = "outBtn" onClick = {this.logout}>Sair</button>
-            <div className = "product-list">
+            <div className = "entidade-list">
                 {entidades.map( item => (
                     <Link to = {`/${item.entidade}`}><article>
                         <strong>{item.entidade}</strong> 
