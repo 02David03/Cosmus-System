@@ -8,11 +8,20 @@
 }
 
 .planeta{
-    height: 100%;
+    display: table;
     width: 100%;
-    overflow: auto;
+    height: 100%;
+    padding-bottom: 136px;
+    color: white;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
     background-image: url(../../Images/Space-Background.jpg);
     background-attachment: fixed;
+
 }
 
 .btn {
