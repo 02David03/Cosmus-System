@@ -1,7 +1,7 @@
 import React, {Component}  from 'react';
 import "./styles.css";
 import fire from "../../config/Fire";
-import { Link } from 'react-router-dom';
+import {Link} from "react-router-dom"
 import { withRouter } from 'react-router-dom';
 
 class Satelite extends Component{
@@ -24,7 +24,27 @@ class Satelite extends Component{
         });
         this.setState({documents : documento})
     });
+    
+    var sistemas = [];
+    await db.collection("sistema_planetario").get().then(querySnapshot =>{
+        querySnapshot.forEach(doc => {
+            sistemas.push({...doc.data(), ...{id:doc.id}});
+        });
+    })
+
+    var document = this.state.documents;
+    for (let index = 0; index < document.length; index++) {
+        var sistema = 0;
+        for (let x = 0; x < sistemas.length; x++) {
+            if (document[index].id === sistemas[x].galaxia_id) sistema++;
+            else continue;                
+        }
+        document[index].qt_sistema = sistema;
     }
+    this.setState({documents : document})
+    };
+    
+
 
     delete(e) {
         const db = fire.firestore()
@@ -45,7 +65,7 @@ class Satelite extends Component{
         return(
             <div className = "planeta">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-                <Link to = "/"><button class="btn"><i class="fa fa-home"></i> Home</button></Link>
+                <Link to = "/"><button className ="btn"><i className="fa fa-home"></i> Home</button></Link>
                 <ul>
                     {estrela.map( item => (
                         <li key = {item.id} className = "card">
@@ -54,10 +74,8 @@ class Satelite extends Component{
                             <div className = "card-planet"> {item.dist_terra}  </div> <br/>
                             <div className = "card-text"> Quantidade de Sistemas: </div> 
                             <div className = "card-planet"> {item.qt_sistema} </div> <br/>
-                            <div className = "card-text"> Sistemas Planetarios: </div> 
-                            <div className = "card-planet"> {item.sistema_plan} </div> <br/>
                             <div className = "botoes"> 
-                                <Link to = { `Sistema-Planetario_edit/${item.id}`} > <button  className = "edit">  Editar   </button> </Link>
+                                <Link to = { `Galaxia_edit/${item.id}`} > <button  className = "edit">  Editar   </button> </Link>
                                 <button className = "delete" onClick = {() => this.delete(item)}> Excluir </button>
                             </div>
                         </li>

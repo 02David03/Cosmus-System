@@ -90,15 +90,15 @@ class OrbitaAdd extends Component{
                     <div className = "Title"> Nome: </div>
                     <div className = "Input"> <input type = "text" name = "nome" value = {this.state.nome} onChange = {this.getInput}/> </div> <br/>
                     <div className = "Title"> Planeta: </div>
-                    <div className = "Input"> <select name = "planetas" value = {this.state.planeta} onChange = {this.getInput}>
+                    <div className = "Input"> <select name = "planetas" onChange = {this.getInput}>
                     <option value = ""> - </option>
                     {Planetas.map (item => (<option key = {item.id} name = {item.nome} value = {item.id + " " + item.nome} > {item.nome}</option>))} </select></div> <br/>
                     <div className = "Title"> Estrela: </div> 
-                    <div className = "Input"> <select name = "estrelas" value = {this.state.estrela} onChange = {this.getInput}>
+                    <div className = "Input"> <select name = "estrelas"  onChange = {this.getInput}>
                     <option value = "-"> - </option>
                     {Estrelas.map (item => (<option key = {item.id} name = {item.nome} value = {item.id + " " + item.nome}> {item.nome}</option>))} </select></div> <br/>
                     <div className = "Title"> Satelites: </div> 
-                    <div className = "Input"> <select name = "satelites" value = {this.state.satelite} onChange = {this.getInput}>
+                    <div className = "Input"> <select name = "satelites" onChange = {this.getInput}>
                     <option value = "-"> - </option>
                     {Satelites.map (item => (<option key = {item.id} name = {item.nome} value = {item.id + " " + item.nome}> {item.nome}</option>))} </select></div> <br/>
                     <div className = "edit"> <input type="submit"/></div> 

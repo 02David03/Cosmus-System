@@ -14,8 +14,7 @@ class SateliteEdit extends Component{
                 nome : "",
                 peso : "",
                 tamanho : "",
-                composicao : "",
-                orbita : "",
+                composicao : ""
         }
     }
     
@@ -28,8 +27,6 @@ class SateliteEdit extends Component{
             this.setState({tamanho : event.target.value})
         } else if (event.target.name === "composicao"){
             this.setState({composicao : event.target.value})
-        } else if (event.target.name === "orbita"){
-            this.setState({orbita : event.target.value})
         }
 
     }
@@ -54,14 +51,12 @@ class SateliteEdit extends Component{
                 <form onSubmit = {this.setInput} >
                     <div className = "Title"> Nome: </div>
                     <div className = "Input"> <input type = "text" name = "nome" value = {this.state.nome} onChange = {this.getInput} /> </div> <br/>
-                    <div className = "Title"> Massa: </div> 
+                    <div className = "Title"> Peso: </div> 
                     <div className = "Input"> <input type="text" name = "peso" value = {this.state.peso} onChange = {this.getInput}/> </div> <br/>
                     <div className = "Title"> Tamanho: </div> 
                     <div className = "Input"> <input type="text" name = "tamanho" value = {this.state.tamanho} onChange = {this.getInput}/> </div> <br/>
                     <div className = "Title"> Composição: </div> 
                     <div className = "Input"> <input type="text" name = "composicao" value = {this.state.composicao} onChange = {this.getInput} /> </div> <br/>
-                    <div className = "Title"> Planeta orbitado: </div> 
-                    <div className = "Input"> <input type="text" name = "orbita" value = {this.state.orbita} onChange = {this.getInput} /> </div> <br/>
                     <div className = "edit"> <input type="submit"/></div> 
                 </form>
             </div>

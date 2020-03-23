@@ -19,6 +19,9 @@ export default class Main extends Component{
                     { entidade : "Galaxia",
                      description: "Essa entidade representa um conjunto de sistemas, geralmente são encontradas facilmente."
                     },
+                    { entidade: "Orbitas",
+                    description: "Orbitas que podem ser compostas por Estrelas, Planetas e Satélites naturais"
+                    },
                     { entidade : "Planeta",
                     description: "Um planeta é um corpo celeste que possui massa o suficiente para se tornar esférico pela sua própria gravidade."
                     },
@@ -27,10 +30,6 @@ export default class Main extends Component{
                     },
                     { entidade : "Sistema-Planetario",
                     description: "Um conjunto de planetas e/ou corpos não estelares em orbita de uma estrela é chamado de sistema planetário."
-                    },
-                    {
-                     entidade: "Orbitas",
-                    description: "Orbitas que podem ser compostas por Estrelas, Planetas e Satélites naturais"
                     }
         ]
     }
@@ -46,7 +45,7 @@ export default class Main extends Component{
                 <button className = "outBtn" onClick = {this.logout}>Sair</button>
             <div className = "entidade-list">
                 {entidades.map( item => (
-                    <Link to = {`/${item.entidade}`}><article>
+                    <Link key = {item.entidade} to = {`/${item.entidade}`}><article>
                         <strong>{item.entidade}</strong> 
                         <p>{item.description}</p>
                     </article>

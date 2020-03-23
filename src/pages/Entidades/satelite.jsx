@@ -45,19 +45,17 @@ class Satelite extends Component{
         return(
             <div className = "planeta">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-                <Link to = "/"><button class="btn"><i class="fa fa-home"></i> Home</button></Link>
+                <Link to = "/"><button className ="btn"><i className="fa fa-home"></i> Home</button></Link>
                 <ul>
                     {estrela.map( item => (
                         <li key = {item.id} className = "card">
                             <div className = "planet-name"> {item.nome}</div> <br/>
-                            <div className = "card-text"> Massa: </div> 
+                            <div className = "card-text"> Peso: </div> 
                             <div className = "card-planet"> {item.peso}  </div> <br/>
                             <div className = "card-text"> Tamanho: </div> 
                             <div className = "card-planet"> {item.tamanho} </div> <br/>
                             <div className = "card-text"> Composição: </div> 
                             <div className = "card-planet"> {item.composicao} </div> <br/>
-                            <div className = "card-text"> Planeta orbitado: </div> 
-                            <div className = "card-planet"> {item.orbita} </div> <br/>
                             <div className = "botoes"> 
                                 <Link to = { `Sistema-Planetario_edit/${item.id}`} > <button  className = "edit">  Editar   </button> </Link>                                
                                 <button className = "delete" onClick = {() => this.delete(item)}> Excluir </button>

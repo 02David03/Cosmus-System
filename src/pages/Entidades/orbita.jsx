@@ -14,6 +14,7 @@ class Orbita extends Component{
         }
 
     }
+
     async componentDidMount(){
         const db = fire.firestore()
         var documento = [];
@@ -25,7 +26,6 @@ class Orbita extends Component{
         });
         
         for (let index = 0; index < this.state.documents.length; index++) {
-            console.log(this.state.documents[index].id);
             if(this.state.documents[index].planeta_id !== ""){
                 db.collection("planets").doc(this.state.documents[index].planeta_id).get().then((doc) => {
                     if (!doc.exists) {
@@ -53,8 +53,8 @@ class Orbita extends Component{
             querySnapshot.forEach(doc => {
                 documento.push({...doc.data(), ...{id:doc.id}});
             });
+            this.setState({documents : documento})
         });
-        this.setState({documents : documento})
     };
 
     delete(e) {
@@ -77,7 +77,7 @@ class Orbita extends Component{
         return(
             <div className = "planeta">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-                <Link to = "/"><button class="btn"><i class="fa fa-home"></i> Home</button></Link>
+                <Link to = "/"><button className ="btn"><i className="fa fa-home"></i> Home</button></Link>
                 <ul>
                     {orbitas.map( item => (
                         <li key = {item.id} className = "card">
@@ -89,7 +89,7 @@ class Orbita extends Component{
                             <Link to = "/Satelite-Natural"> <div className = "card-text"> Satélite Natural: </div> </Link>
                             <div className = "card-planet"> {item.satelite_name} </div> <br/>
                             <div className = "botoes"> 
-                                <Link to = { `Sistema-Planetario_edit/${item.id}`} > <button  className = "edit">  Editar   </button> </Link>
+                                <Link to = { `/Orbitas_edit/${item.id}`} > <button  className = "edit">  Editar   </button> </Link>
                                 <button className = "delete" onClick = {() => this.delete(item)}> Excluir </button>
                             </div>
                         </li>

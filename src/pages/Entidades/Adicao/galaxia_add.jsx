@@ -4,7 +4,7 @@ import fire from "../../../config/Fire";
 import "./styles.css";
 
 
-class GalaxiaEdit extends Component{
+class GalaxiaAdd extends Component{
     
     constructor(props){
         super(props);
@@ -13,18 +13,15 @@ class GalaxiaEdit extends Component{
         this.state = {
                 nome : "",
                 dist_terra : "",
-                qt_sistema : 0,
-                sistema_plan : ""
+                qt_sistema : 0
         }
     }
-    
+
     getInput(event) {
         if (event.target.name === "nome"){
             this.setState({nome : event.target.value})
         } else if (event.target.name === "dist_terra"){
             this.setState({dist_terra : event.target.value})
-        } else if (event.target.name === "qt_sistema"){
-            this.setState({qt_sistema : event.target.value})
         } else if (event.target.name === "sistema_plan"){
             this.setState({sistema_plan : event.target.value})
         }
@@ -53,10 +50,6 @@ class GalaxiaEdit extends Component{
                     <div className = "Input"> <input type = "text" name = "nome" value = {this.state.nome} onChange = {this.getInput} /> </div> <br/>
                     <div className = "Title"> Distância da terra: </div> 
                     <div className = "Input"> <input type="text" name = "dist_terra" value = {this.state.dist_terra} onChange = {this.getInput}/>  </div> <br/>
-                    <div className = "Title"> Quantidade de Sistemas: </div> 
-                    <div className = "Input"> <input type="text" name = "qt_sistema" value = {this.state.qt_sistema} onChange = {this.getInput}/> </div> <br/>
-                    <div className = "Title"> Sistema Planetario</div>
-                    <div className = "Input"> <input type="text" name = "sistema_plan" value = {this.state.sistema_plan} onChange = {this.getInput}/> </div> <br/>
                     <div className = "edit"> <input type="submit"/></div> 
                 </form>
             </div>
@@ -64,4 +57,4 @@ class GalaxiaEdit extends Component{
     }
 }
 
-export default withRouter(GalaxiaEdit);
+export default withRouter(GalaxiaAdd);

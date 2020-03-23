@@ -4,8 +4,9 @@
     border-radius: 5px;
     padding: 20px;
     margin-top: 20px;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 15%;
+    margin-right: 15%;
+    min-width: 400px
 }
 .edicao .Title{
     font-size: 20px;
@@ -15,7 +16,7 @@
 }
 
 .edicao input{
-    width: 50%;
+    width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -24,7 +25,7 @@
     box-sizing: border-box;
 }
 .edicao select{
-    width: 35%;
+    width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -32,8 +33,13 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+.edicao .edit {
+    display: flex;
+    justify-content: flex-end;
+}
 input[type=submit] {
-    width: 10%;
+    width: 100px;
     background:linear-gradient(to bottom, #6a0381 5%, rgb(59, 6, 75) 100%);
     color: white;
     padding: 14px 20px;
@@ -41,7 +47,6 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 90%;
 }
 input[type=submit]:hover{
     background:linear-gradient(to bottom, rgb(59, 6, 75) 5%, #6a0381 100%);
