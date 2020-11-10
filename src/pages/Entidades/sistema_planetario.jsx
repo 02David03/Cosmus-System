@@ -25,7 +25,7 @@ class Sistema_plan extends Component{
             this.setState({documents : documento})
         });
         for (let index = 0; index < this.state.documents.length; index++) {
-            if(this.state.documents[index].galaxia_id !== ""){
+            if(this.state.documents[index].galaxia_id !== undefined){
                 await db.collection("galaxia").doc(this.state.documents[index].galaxia_id).get().then((doc) => {
                     console.log(this.state.documents[index].galaxia_id)
                     if (!doc.exists) {
